@@ -17,7 +17,7 @@ const boostrap = async () => {
       console.log("service is running port:", PORT);
     });
   } catch (error) {
-    console.error(Error.messages);
+    console.error(error.messages);
   }
 };
 boostrap();

@@ -6,12 +6,13 @@ const postSchema = new Schema(
       type: String,
       required: true,
     },
-    contet: {
+    content: {
       type: String,
       required: true,
     },
     author: {
-      type: String,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "users",
       require: true,
     },
   },

@@ -11,5 +11,14 @@ class postController {
       res.status(200).json({ message: "add post" });
     }
   }
+  async getPostcontroller(req, res) {
+    const allpost = await this.postService.getPost();
+    res.status(200).json(allpost);
+  }
+  async getPostIdcontroller(req, res) {
+    const { id } = req.params;
+    const allpost = await this.postService.getPostId(id);
+    res.status(200).json(allpost);
+  }
 }
 export default postController;
